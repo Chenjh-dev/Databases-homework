@@ -1,0 +1,18 @@
+spring: 
+    thymeleaf: 
+        prefix: classpath:/templates/
+        check-template-location: true
+        cache: false
+        suffix: .html
+        encoding: UTF-8
+        mode: HTML5
+    datasource:
+        url: jdbc:mysql:///sql_test5
+        username: root
+        password: 123321
+        driver-class-name: com.mysql.cj.jdbc.Driver
+server:
+    error:
+        whitelabel:
+            enabled: false
+        include-stacktrace: always

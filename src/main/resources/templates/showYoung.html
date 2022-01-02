@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>客户信息</title>
+
+
+    <link href="/webjars/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/webjars/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="/webjars/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="/js/showYoung.js"></script>
+
+    <style>
+
+        /* 鼠标移动到课程上时的动画 */
+        .select:hover, .select:focus {
+            background: yellow;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div>
+    <div>
+        <h1 align="center" style="color: orangered" >在线健身管理系统</h1>
+    </div>
+    <br>
+
+    <!--首行栏-->
+    <div>
+        <ul class="nav nav-pills justify-content-center top">
+            <li class="nav-item small-title-text">
+                <a class="nav-link" href="/page/showOverAge"><h3>客户信息</h3></a>
+            </li>
+            <li class="nav-item small-title-text">
+                <a class="nav-link" href="/page/showPT"><h3>教练信息</h3></a>
+            </li>
+            <li class="nav-item small-title-text">
+                <a class="nav-link" href="/page/showFitAndGold"><h3>查看Fit and Gold</h3></a>
+            </li>
+            <li class="nav-item small-title-text">
+                <a class="nav-link" href="/page/showClientsPerTrainer"><h3>教练客户数</h3></a>
+            </li>
+            <li class="nav-item small-title-text">
+                <a class="nav-link" href="/page/showMonthly_Money_Brought_In_by_Trainer"><h3>教练收入</h3></a>
+            </li>
+            <li class="nav-item small-title-text">
+                <a class="nav-link active" href="/page/showYoung"><h3>删除记录</h3></a>
+            </li>
+        </ul>
+    </div>
+
+    <br>
+    <!--点击删除未成年人-->
+    <div align="right" style="padding-right: 10%">
+        <button onclick="return deleteYoung()">检查并删除未成年账号</button>
+    </div>
+    <br>
+
+    <!--表格-->
+    <div>
+
+
+        <table class="table">
+            <thead>
+            <tr bgcolor="orange">
+                <th>姓名</th>
+                <th>地址</th>
+                <th>邮政编码</th>
+                <th>手机号码</th>
+                <th>邮箱地址</th>
+                <th>卡余额</th>
+                <th>出生日期</th>
+                <th>健身频率</th>
+                <th>肥胖程度</th>
+                <th>健康水平</th>
+            </tr>
+            </thead>
+            <tbody id="table_Body">
+
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+<script>
+    getMessage();
+</script>
+
+</body>
+
+</html>

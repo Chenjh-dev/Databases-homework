@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="work.mapper.Monthly_Money_Brought_In_by_Trainer_Mapper">
+
+    <resultMap id="Map1" type="java.util.HashMap">
+    </resultMap>
+
+    <resultMap id="Map2" type="java.util.HashMap">
+    </resultMap>
+
+    <resultMap id="Map3" type="java.util.HashMap">
+    </resultMap>
+
+    <select id="showMonthly_Money_Brought_In_by_Trainer"  resultMap="Map1,Map2,Map3"  parameterType="Map"
+            statementType="CALLABLE"  >
+        {CALL Monthly_Money_Brought_In_by_Trainer()}
+    </select>
+
+</mapper>
